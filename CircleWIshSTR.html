@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wish STR Community</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 650px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #333;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Join Wish STR Community</h1>
+  <p>Serious investors only. Apply below.</p>
+
+  <!-- 🔥 FORM START -->
+  <form action="https://formspree.io/f/wishstrform" method="POST">
+
+    <label>Full Name</label>
+    <input type="text" name="full_name" required>
+
+    <label>Profile Name</label>
+    <input type="text" name="profile_name">
+
+    <label>Email Address</label>
+    <input type="email" name="email" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone">
+
+    <label>Interested In</label>
+    <select name="interest" required>
+      <option value="">Select one</option>
+      <option>Buying Property</option>
+      <option>Buying Business</option>
+      <option>Both</option>
+    </select>
+
+    <label>Primary Goal</label>
+    <select name="goal" required>
+      <option value="">Select one</option>
+      <option>Tax Benefits</option>
+      <option>Passive Income</option>
+      <option>Both</option>
+    </select>
+
+    <label>Why do you want to join?</label>
+    <textarea name="reason" required></textarea>
+
+    <button type="submit">Apply Now</button>
+
+  </form>
+  <!-- 🔥 FORM END -->
+
+</div>
+
+</body>
+</html>
