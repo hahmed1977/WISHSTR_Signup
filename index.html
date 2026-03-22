@@ -1,90 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Wish STR Community</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 650px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    p {
-      text-align: center;
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-    label {
-      font-weight: bold;
-      margin-top: 15px;
-      display: block;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 8px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 14px;
-      background: black;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #333;
-    }
-  </style>
-</head>
-
-<body>
-
 <div class="container">
-  <h1>Join Wish STR Community</h1>
-  <p>Serious investors only. Apply below.</p>
 
-  <!-- 🔥 FORM START -->
- <form action="https://formspree.io/f/mpqygqwo" method="POST">
+  <!-- LOGO -->
+  <div style="text-align:center; margin-bottom:20px;">
+    <img src="https://via.placeholder.com/150x60?text=WISH+STR" alt="Wish STR Logo" style="max-width:150px;">
+  </div>
+
+  <h1>Join Wish STR Community</h1>
+  <p><strong>This is a private investor network.</strong><br>
+  We do NOT accept everyone. Applications are carefully reviewed.</p>
+
+  <!-- PROCESS SECTION -->
+  <div style="background:#f9f9f9; padding:15px; border-radius:8px; margin-bottom:20px;">
+    <h3>How It Works</h3>
+    <ol style="padding-left:20px;">
+      <li>Submit your application below</li>
+      <li>Our team reviews your profile</li>
+      <li>You will receive a call or text from WISH STR</li>
+      <li>If approved, you will get access to the community</li>
+    </ol>
+  </div>
+
+  <!-- FORM -->
+  <form action="https://formspree.io/f/mpqygqwo" method="POST">
 
     <label>Full Name</label>
     <input type="text" name="full_name" required>
 
     <label>Profile Name</label>
-    <input type="text" name="profile_name">
+    <input type="text" name="profile_name" required>
 
     <label>Email Address</label>
     <input type="email" name="email" required>
 
     <label>Phone Number</label>
-    <input type="tel" name="phone">
+    <input type="tel" name="phone" required>
 
     <label>Interested In</label>
     <select name="interest" required>
@@ -103,14 +52,10 @@
     </select>
 
     <label>Why do you want to join?</label>
-    <textarea name="reason" required></textarea>
+    <textarea name="reason" required minlength="30"></textarea>
 
     <button type="submit">Apply Now</button>
 
   </form>
-  <!-- 🔥 FORM END -->
 
 </div>
-
-</body>
-</html>
