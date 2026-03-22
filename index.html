@@ -81,14 +81,23 @@ button {
 button:hover {
   background: #15803d;
 }
+
+/* THANK YOU MESSAGE */
+.success {
+  display: none;
+  text-align: center;
+}
+
+.success h2 {
+  color: #16a34a;
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="container" id="formContainer">
 
-  <!-- LOGO -->
   <div class="logo">
     <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR Logo">
   </div>
@@ -103,15 +112,15 @@ button:hover {
   <div class="process">
     <h3>How It Works</h3>
     <ol>
-      <li>Submit your application below</li>
-      <li>Our team reviews your profile</li>
-      <li>You will receive a call or text from WISH STR</li>
-      <li>If approved, you will get access</li>
+      <li>Submit your application</li>
+      <li>We review your profile</li>
+      <li>You will receive a call or text</li>
+      <li>If approved, you get access</li>
     </ol>
   </div>
 
   <!-- FORM -->
-  <form id="myForm" action="https://formspree.io/f/mpqygqwo" method="POST">
+  <form id="myForm">
 
     <input type="hidden" name="_subject" value="New Wish STR Application">
 
@@ -152,12 +161,46 @@ button:hover {
 
 </div>
 
-<!-- 🔥 FORCE REDIRECT SCRIPT -->
+<!-- THANK YOU SECTION -->
+<div class="container success" id="successMessage">
+
+  <div class="logo">
+    <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR Logo">
+  </div>
+
+  <h2>Application Received ✅</h2>
+
+  <p>
+    Thank you for applying to Wish STR.<br>
+    Our team will review your application.
+  </p>
+
+  <p><strong>You will receive a call or text if approved.</strong></p>
+
+</div>
+
+<!-- SCRIPT -->
 <script>
-document.getElementById("myForm").addEventListener("submit", function() {
-  setTimeout(function() {
-    window.location.href = "https://hahmed1977.github.io/WISHSTR_Signup/thank-you.html";
-  }, 500);
+document.getElementById("myForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/mpqygqwo", {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      document.getElementById("formContainer").style.display = "none";
+      document.getElementById("successMessage").style.display = "block";
+    } else {
+      alert("Something went wrong. Try again.");
+    }
+  });
 });
 </script>
 
