@@ -1,97 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wish STR Community</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Wish STR Community</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f5f5f5, #e9ecef);
-      margin: 0;
-      padding: 0;
-    }
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
 
-    .container {
-      max-width: 700px;
-      margin: 50px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
 
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    p {
-      text-align: center;
-      color: #555;
-      margin-bottom: 20px;
-    }
+.logo img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
 
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
+h1 {
+  text-align: center;
+}
 
-    input, select, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-top: 8px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 14px;
-    }
+.subtitle {
+  text-align: center;
+  color: #555;
+}
 
-    textarea {
-      min-height: 100px;
-      resize: vertical;
-    }
+.process {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
 
-    /* ✅ GREEN BUTTON */
-    button {
-      margin-top: 25px;
-      width: 100%;
-      padding: 14px;
-      background: #16a34a;
-      color: #fff;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.process ol {
+  padding-left: 20px;
+}
 
-    button:hover {
-      background: #15803d;
-    }
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
 
-    .process {
-      background: #f8f8f8;
-      padding: 20px;
-      border-radius: 10px;
-      margin: 25px 0;
-    }
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
 
-    .process h3 {
-      margin-bottom: 10px;
-    }
+textarea {
+  min-height: 100px;
+}
 
-    .process ol {
-      padding-left: 20px;
-      line-height: 1.6;
-    }
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 25px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    .note {
-      font-size: 14px;
-      color: #777;
-      margin-top: 10px;
-    }
-  </style>
+button:hover {
+  background: #15803d;
+}
+</style>
 </head>
 
 <body>
@@ -99,38 +94,26 @@
 <div class="container">
 
   <!-- LOGO -->
-  <div style="text-align:center; margin-bottom:25px;">
-    <img src="https://i.imgur.com/2qkdwmb.png" 
-         alt="Wish STR Logo" 
-         style="width:100%; max-width:650px; border-radius:10px;">
+  <div class="logo">
+    <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR Logo">
   </div>
 
-  <!-- TITLE -->
   <h1>Join Wish STR Community</h1>
 
-  <p>
+  <p class="subtitle">
     <strong>Private Investor Network</strong><br>
-    We selectively approve members based on experience, intent, and alignment.<br>
-    <strong>Not all applicants will be accepted.</strong>
+    We do NOT accept everyone. Applications are reviewed carefully.
   </p>
 
   <!-- PROCESS -->
   <div class="process">
-    <h3>How the Process Works</h3>
-
+    <h3>How It Works</h3>
     <ol>
-      <li><strong>Submit Application</strong> — Complete the form below with accurate details.</li>
-
-      <li><strong>Application Review</strong> — Our team reviews your investment goals and experience.</li>
-
-      <li><strong>Initial Contact</strong> — You will receive a <strong>call or text from WISH STR</strong>.</li>
-
-      <li><strong>Approval</strong> — If selected, you will receive access to the community.</li>
+      <li>Submit your application below</li>
+      <li>We review your profile</li>
+      <li>You will receive a call or text from WISH STR</li>
+      <li>If approved, you will get access to the community</li>
     </ol>
-
-    <p class="note">
-      Due to high demand, we are not accepting everyone into the community.
-    </p>
   </div>
 
   <!-- FORM -->
@@ -146,7 +129,7 @@
     <input type="email" name="email" required>
 
     <label>Phone Number</label>
-    <input type="tel" name="phone" required minlength="10">
+    <input type="tel" name="phone" required>
 
     <label>Interested In</label>
     <select name="interest" required>
@@ -166,9 +149,6 @@
 
     <label>Why do you want to join?</label>
     <textarea name="reason" required minlength="30"></textarea>
-
-    <!-- EMAIL SUBJECT -->
-    <input type="hidden" name="_subject" value="New Wish STR Application">
 
     <button type="submit">Apply Now</button>
 
