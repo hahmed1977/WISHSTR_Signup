@@ -2,207 +2,124 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Wish STR Community</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wish STR</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
 
-.container {
-  max-width: 700px;
-  margin: 40px auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
+  body {
+    height: 100vh;
+    display: flex;
+    color: white;
+  }
 
-.logo {
-  text-align: center;
-  margin-bottom: 20px;
-}
+  /* LEFT IMAGE */
+  .left {
+    flex: 1;
+    background: url('https://i.imgur.com/PbjULjs.jpg') no-repeat center center/cover;
+  }
 
-.logo img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-}
+  /* RIGHT IMAGE */
+  .right {
+    flex: 1;
+    background: url('https://i.imgur.com/PbjULjs.jpg') no-repeat center center/cover;
+  }
 
-h1 {
-  text-align: center;
-}
+  /* CENTER CONTENT */
+  .center {
+    width: 450px;
+    background: #021e16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
 
-.subtitle {
-  text-align: center;
-  color: #555;
-}
+  .form-box {
+    width: 100%;
+    text-align: center;
+  }
 
-.process {
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-}
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
 
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-}
+  p {
+    margin-bottom: 20px;
+    color: #a7f3d0;
+  }
 
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-top: 6px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
+  input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: white;
+  }
 
-textarea {
-  min-height: 100px;
-}
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+  }
 
-button {
-  width: 100%;
-  padding: 14px;
-  margin-top: 25px;
-  background: #16a34a;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
+  button {
+    width: 100%;
+    padding: 14px;
+    background: #10b981;
+    border: none;
+    border-radius: 8px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
 
-button:hover {
-  background: #15803d;
-}
+  button:hover {
+    background: #059669;
+  }
 
-/* THANK YOU MESSAGE */
-.success {
-  display: none;
-  text-align: center;
-}
+  /* MOBILE */
+  @media (max-width: 900px) {
+    .left, .right {
+      display: none;
+    }
 
-.success h2 {
-  color: #16a34a;
-}
+    .center {
+      width: 100%;
+      height: 100vh;
+    }
+  }
 </style>
 </head>
 
 <body>
 
-<div class="container" id="formContainer">
+<div class="left"></div>
 
-  <div class="logo">
-    <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR Logo">
+<div class="center">
+  <div class="form-box">
+    <h1>Wish STR</h1>
+    <p>Exclusive STR deals & investor network</p>
+
+    <form action="https://formspree.io/f/yourID" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" placeholder="What are you looking for?"></textarea>
+      <button type="submit">Get Early Access</button>
+    </form>
   </div>
-
-  <h1>Join Wish STR Community</h1>
-
-  <p class="subtitle">
-    <strong>Private Investor Network</strong><br>
-    We do NOT accept everyone. Applications are carefully reviewed.
-  </p>
-
-  <div class="process">
-    <h3>How It Works</h3>
-    <ol>
-      <li>Submit your application</li>
-      <li>We review your profile</li>
-      <li>You will receive a call or text</li>
-      <li>If approved, you get access</li>
-    </ol>
-  </div>
-
-  <!-- FORM -->
-  <form id="myForm">
-
-    <input type="hidden" name="_subject" value="New Wish STR Application">
-
-    <label>Full Name</label>
-    <input type="text" name="full_name" required>
-
-    <label>Profile Name</label>
-    <input type="text" name="profile_name" required>
-
-    <label>Email Address</label>
-    <input type="email" name="email" required>
-
-    <label>Phone Number</label>
-    <input type="tel" name="phone" required>
-
-    <label>Interested In</label>
-    <select name="interest" required>
-      <option value="">Select one</option>
-      <option>Buying Property</option>
-      <option>Buying Business</option>
-      <option>Both</option>
-    </select>
-
-    <label>Primary Goal</label>
-    <select name="goal" required>
-      <option value="">Select one</option>
-      <option>Tax Benefits</option>
-      <option>Passive Income</option>
-      <option>Both</option>
-    </select>
-
-    <label>Why do you want to join?</label>
-    <textarea name="reason" required></textarea>
-
-    <button type="submit">Apply Now</button>
-
-  </form>
-
 </div>
 
-<!-- THANK YOU SECTION -->
-<div class="container success" id="successMessage">
-
-  <div class="logo">
-    <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR Logo">
-  </div>
-
-  <h2>Application Received ✅</h2>
-
-  <p>
-    Thank you for applying to Wish STR.<br>
-    Our team will review your application.
-  </p>
-
-  <p><strong>You will receive a call or text if approved.</strong></p>
-
-</div>
-
-<!-- SCRIPT -->
-<script>
-document.getElementById("myForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const data = new FormData(form);
-
-  fetch("https://formspree.io/f/mpqygqwo", {
-    method: "POST",
-    body: data,
-    headers: {
-      'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok) {
-      document.getElementById("formContainer").style.display = "none";
-      document.getElementById("successMessage").style.display = "block";
-    } else {
-      alert("Something went wrong. Try again.");
-    }
-  });
-});
-</script>
+<div class="right"></div>
 
 </body>
 </html>
