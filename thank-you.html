@@ -1,114 +1,146 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Application Received - Wish STR</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Received - Wish STR</title>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #f4f6f8, #e9ecef);
-  margin: 0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-.container {
-  max-width: 650px;
-  margin: 60px auto;
-  background: white;
-  padding: 35px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  text-align: center;
-}
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial;
+      display: flex;
+      min-height: 100vh;
+    }
 
-.logo img {
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
+    /* SIDE IMAGES (same as index) */
+    .side {
+      flex: 1;
+      background-image: url('https://i.imgur.com/PbjULjs.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
 
-h1 {
-  color: #16a34a;
-  margin-bottom: 15px;
-}
+    /* CENTER PANEL (same style) */
+    .center {
+      width: 420px;
+      background: #062f24;
+      color: white;
+      padding: 50px 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
 
-p {
-  color: #555;
-  line-height: 1.6;
-}
+    /* LOGO */
+    .logo img {
+      width: 230px;
+      display: block;
+      margin: 0 auto 20px;
+    }
 
-.highlight {
-  font-weight: bold;
-  color: #000;
-}
+    /* TITLE */
+    h1 {
+      margin: 10px 0;
+      color: #1dbf73;
+    }
 
-.box {
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 25px;
-}
+    /* TEXT */
+    p {
+      color: #cfe7df;
+      line-height: 1.6;
+      margin: 8px 0;
+    }
 
-button {
-  margin-top: 25px;
-  padding: 14px 20px;
-  background: #16a34a;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    /* BOX */
+    .box {
+      background: #0f4434;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
 
-button:hover {
-  background: #15803d;
-}
-</style>
+    /* BUTTON */
+    button {
+      margin-top: 25px;
+      padding: 14px;
+      border-radius: 8px;
+      border: none;
+      background: #1dbf73;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #17a863;
+    }
+
+    /* MOBILE */
+    @media(max-width: 900px) {
+      .side {
+        display: none;
+      }
+
+      .center {
+        width: 100%;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
-<div class="container">
+  <div class="side"></div>
 
-  <!-- LOGO -->
-  <div class="logo">
-    <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR Logo">
-  </div>
+  <div class="center">
 
-  <!-- TITLE -->
-  <h1>Application Received ✅</h1>
+```
+<!-- LOGO -->
+<div class="logo">
+  <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR">
+</div>
+
+<!-- TITLE -->
+<h1>Application Received ✅</h1>
+
+<p>
+  Thank you for applying to <strong>Wish STR Private Investor Network</strong>.
+</p>
+
+<!-- PROCESS BOX -->
+<div class="box">
+
+  <p><strong>What happens next?</strong></p>
 
   <p>
-    Thank you for applying to <span class="highlight">Wish STR Community</span>.
+    ✔️ We review your profile<br>
+    ✔️ Qualified applicants will be contacted<br>
+    ✔️ You may receive a call or text
   </p>
 
-  <p>
-    Our team is now reviewing your application carefully.
+  <p style="margin-top:10px;">
+    ⚠️ Not everyone is accepted due to limited access
   </p>
-
-  <!-- PROCESS -->
-  <div class="box">
-    <p><strong>What happens next?</strong></p>
-
-    <p>
-      ✔️ We review your investment goals and experience<br>
-      ✔️ Qualified applicants will be contacted directly<br>
-      ✔️ You will receive a <strong>call or text from WISH STR</strong>
-    </p>
-
-    <p style="margin-top:10px;">
-      ⚠️ Due to high demand, not all applicants will be accepted.
-    </p>
-  </div>
-
-  <!-- CTA -->
-  <button onclick="window.location.href='https://hahmed1977.github.io/WISHSTR_Signup/'">
-    Back to Home
-  </button>
 
 </div>
+
+<!-- BUTTON -->
+<button onclick="window.location.href='https://wishstr-signup.com/'">
+  Back to Home
+</button>
+```
+
+  </div>
+
+  <div class="side"></div>
 
 </body>
 </html>
