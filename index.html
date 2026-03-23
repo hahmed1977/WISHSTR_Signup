@@ -142,7 +142,7 @@
     <p class="subtitle">Private Investor Network</p>
 
     <!-- FORM -->
-    <form action="https://formspree.io/f/mpqygqwo" method="POST" onsubmit="redirectAfterSubmit()">
+    <form id="contact-form" action="https://formspree.io/f/mpqygqwo" method="POST">
 
       <input type="text" name="name" placeholder="Full Name" required>
 
@@ -183,13 +183,26 @@
 
   <div class="side"></div>
 
-  <!-- 🔥 REDIRECT SCRIPT -->
+  <!-- ✅ FINAL SCRIPT (NO FORMSpree PAGE EVER AGAIN) -->
   <script>
-    function redirectAfterSubmit() {
-      setTimeout(function() {
-        window.location.href = "https://wishstr-signup.com/thank-you.html";
-      }, 800);
-    }
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const data = new FormData(form);
+
+      await fetch("https://formspree.io/f/mpqygqwo", {
+        method: "POST",
+        body: data,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      // redirect after submit
+      window.location.href = "https://wishstr-signup.com/thank-you.html";
+    });
   </script>
 
 </body>
