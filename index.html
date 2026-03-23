@@ -34,13 +34,26 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* LOGO */
     .logo img {
-      width: 230px;
+      width: 260px;
       display: block;
-      margin: 0 auto 15px;
+      margin: 0 auto 20px;
     }
 
     /* TEXT */
@@ -143,7 +156,10 @@
 
     <!-- FORM -->
     <form action="https://formspree.io/f/mpqygqwo" method="POST">
-    <input type="hidden" name="_redirect" value="https://wishstr-signup.com/thank-you.html">
+
+      <!-- ✅ IMPORTANT REDIRECT FIX -->
+      <input type="hidden" name="_next" value="https://wishstr-signup.com/thank-you.html">
+
       <input type="text" name="name" placeholder="Full Name" required>
 
       <input type="email" name="email" placeholder="Email Address" required>
@@ -168,7 +184,7 @@
 
       <button type="submit">Apply for Access</button>
 
-      <!-- MESSAGE -->
+      <!-- INFO MESSAGE -->
       <div class="note">
         <strong>Private Investor Network</strong><br>
         We do NOT accept everyone. Applications are carefully reviewed.<br><br>
