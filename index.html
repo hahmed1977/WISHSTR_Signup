@@ -10,12 +10,11 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial;
+      font-family: Arial;
       display: flex;
       min-height: 100vh;
     }
 
-    /* SIDE BACKGROUND */
     .side {
       flex: 1;
       background-image: url('https://i.imgur.com/PbjULjs.jpeg');
@@ -23,7 +22,6 @@
       background-position: center;
     }
 
-    /* CENTER PANEL */
     .center {
       width: 420px;
       background: #062f24;
@@ -32,23 +30,14 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      animation: fadeIn 0.8s ease;
     }
 
-    /* ANIMATION */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* LOGO */
     .logo img {
       width: 260px;
-      display: block;
       margin: 0 auto 20px;
+      display: block;
     }
 
-    /* TEXT */
     h1 {
       text-align: center;
       margin: 5px 0;
@@ -56,15 +45,8 @@
 
     .subtitle {
       text-align: center;
-      font-size: 14px;
       margin-bottom: 25px;
       color: #b8d6cc;
-    }
-
-    /* FORM */
-    form {
-      display: flex;
-      flex-direction: column;
     }
 
     input, select, textarea {
@@ -72,54 +54,27 @@
       padding: 13px;
       margin-bottom: 12px;
       border-radius: 8px;
-      border: 1px solid transparent;
+      border: none;
       background: #0f4434;
       color: white;
-      font-size: 14px;
     }
 
-    input::placeholder, textarea::placeholder {
-      color: #a7cfc4;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border: 1px solid #1dbf73;
-    }
-
-    textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
-
-    /* BUTTON */
     button {
       padding: 14px;
-      border-radius: 8px;
       border: none;
       background: #1dbf73;
       color: white;
-      font-weight: 600;
-      font-size: 15px;
+      border-radius: 8px;
       cursor: pointer;
-      transition: 0.2s;
     }
 
-    button:hover {
-      background: #17a863;
-      transform: translateY(-1px);
-    }
-
-    /* NOTE */
     .note {
       font-size: 13px;
       margin-top: 16px;
       text-align: center;
       color: #cfe7df;
-      line-height: 1.6;
     }
 
-    /* MOBILE */
     @media(max-width: 900px) {
       .side { display: none; }
       .center { width: 100%; }
@@ -129,81 +84,70 @@
 
 <body>
 
-  <div class="side"></div>
+<div class="side"></div>
 
-  <div class="center">
+<div class="center">
 
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="https://i.imgur.com/2qkdwmb.png" alt="Wish STR">
-    </div>
-
-    <h1>Wish STR</h1>
-    <p class="subtitle">Private Investor Network</p>
-
-    <!-- FORM -->
-    <form id="contact-form" action="https://formspree.io/f/mpqygqwo" method="POST">
-
-      <input type="text" name="name" placeholder="Full Name" required>
-
-      <input type="email" name="email" placeholder="Email Address" required>
-
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-
-      <select name="experience" required>
-        <option value="">Experience Level</option>
-        <option>Beginner</option>
-        <option>Intermediate</option>
-        <option>Advanced</option>
-      </select>
-
-      <select name="budget" required>
-        <option value="">Investment Budget</option>
-        <option>$50K - $100K</option>
-        <option>$100K - $250K</option>
-        <option>$250K+</option>
-      </select>
-
-      <textarea name="message" placeholder="What are you looking for?" required></textarea>
-
-      <button type="submit">Apply for Access</button>
-
-      <!-- INFO -->
-      <div class="note">
-        <strong>Private Investor Network</strong><br>
-        We do NOT accept everyone. Applications are carefully reviewed.<br><br>
-        We review your profile.<br>
-        You may receive a call or text.<br>
-        If approved, you get access.
-      </div>
-
-    </form>
-
+  <div class="logo">
+    <img src="https://i.imgur.com/2qkdwmb.png">
   </div>
 
-  <div class="side"></div>
+  <h1>Wish STR</h1>
+  <p class="subtitle">Private Investor Network</p>
 
-  <!-- ✅ FINAL SCRIPT (NO FORMSpree PAGE EVER AGAIN) -->
-  <script>
-    const form = document.getElementById("contact-form");
+  <!-- IMPORTANT: NO action redirect -->
+  <form id="form">
 
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault();
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
 
-      const data = new FormData(form);
+    <select name="experience" required>
+      <option value="">Experience Level</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select>
 
-      await fetch("https://formspree.io/f/mpqygqwo", {
-        method: "POST",
-        body: data,
-        headers: {
-          "Accept": "application/json"
-        }
-      });
+    <select name="budget" required>
+      <option value="">Investment Budget</option>
+      <option>$50K - $100K</option>
+      <option>$100K - $250K</option>
+      <option>$250K+</option>
+    </select>
 
-      // redirect after submit
-      window.location.href = "https://wishstr-signup.com/thank-you.html";
-    });
-  </script>
+    <textarea name="message" placeholder="What are you looking for?" required></textarea>
+
+    <button type="submit">Apply for Access</button>
+
+    <div class="note">
+      <strong>Private Investor Network</strong><br>
+      We do NOT accept everyone. Applications are reviewed.<br>
+      You may receive a call or text if approved.
+    </div>
+
+  </form>
+
+</div>
+
+<div class="side"></div>
+
+<script>
+document.getElementById("form").addEventListener("submit", async function(e) {
+  e.preventDefault(); // THIS STOPS FORMSPREE PAGE
+
+  const data = new FormData(this);
+
+  await fetch("https://formspree.io/f/mpqygqwo", {
+    method: "POST",
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  // FORCE redirect
+  window.location.href = "https://wishstr-signup.com/thank-you.html";
+});
+</script>
 
 </body>
 </html>
